@@ -9,6 +9,8 @@
     <script src="https://kit.fontawesome.com/38981f7228.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    
+    </div>
     <i class="fas fa-volume-up" id="volume-btn"></i>
     <div id="tablero" class="container">
         
@@ -22,12 +24,11 @@
             <audio src="./music/Voice of Eternity - Space Hybrid Music.mp3" autoplay loop></audio>
         </div>
     </div>
-
+    
     <div id="game-container">
-        <div id="player">
-        </div>
+        <div id="player" class="player-position" style="bottom: 0; left: 0;"></div>
     </div>
-    <script src="./js/Game.js">
-    </script>
+    <script src="./js/Player.js"></script>
+    <script src="./js/Game.js"></script>
 </body>
 </html>

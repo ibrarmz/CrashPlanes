@@ -125,16 +125,19 @@ a {
     animation-name: back-animation;
     animation-duration: 20s;
     animation-iteration-count: infinite;
+    overflow: hidden;
 }
 
-.player {
+.player-position {
     position: absolute;
-    width: 25%;
-    height: 25%;
-    right: 35%;
     bottom: 0;
+    left: 45%;
+}
+
+.player { 
     background-image: url('../pics/player/player.png');
     background-position: center;
     background-size: contain;
-    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
 }
