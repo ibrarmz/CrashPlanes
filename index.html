@@ -6,18 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Crash Planes</title>
+    <script src="https://kit.fontawesome.com/38981f7228.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <i class="fas fa-volume-mute"></i>
+    <i class="fas fa-volume-up" id="volume-btn"></i>
+    <div id="tablero" class="container">
+        
         <h1>Crash Planes</h1>
         <p>JAGI</p>
-        <a href="#">PLAY</a>
+        <a id="play">PLAY</a>
         <a href="#">EXIT</a>
         <div class="pie">
             <a href="#">HIGH SCORE: 1500</a>
             <a href="#">IRS</a>
             <audio src="./music/Voice of Eternity - Space Hybrid Music.mp3" autoplay loop></audio>
+        </div>
+    </div>
+
+    <div id="game-container">
+        <div id="player">
         </div>
     </div>
     <script src="./js/Game.js">

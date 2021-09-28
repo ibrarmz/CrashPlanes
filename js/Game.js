@@ -1,22 +1,23 @@
-import '/js/FO.js';
-import '/js/UFO.js';
-import '/js/Aircraft.js';
-import '/js/Player.js';
-import '/js/Bosses.js';
-import '/js/Enemies.js';
-
 const tablero = document.getElementById('tablero');
+const juego = document.getElementById('game-container');
+const playBtn = document.getElementById('play');
+const volumeBtn = document.getElementById('volume-btn');
+const player = document.getElementById('player');
 
-document.addEventListener('DomContentLoaded', () => {
-
+volumeBtn.addEventListener('click', ()=> {
+    if(volumeBtn.className == 'fas fa-volume-up'){
+        volumeBtn.classList.remove('fa-volume-up');
+        volumeBtn.classList.add('fa-volume-mute');
+        document.querySelector('audio').muted = true;
+    }else{
+        volumeBtn.classList.remove('fa-volume-mute');
+        volumeBtn.classList.add('fa-volume-up');
+        document.querySelector('audio').muted = false;
+    }
 });
 
-const draw = () => {
-    if(tablero.getContext){
-        let ctx = tablero.getContext('2d');
-    }
-
-    gifler('../pics/chems-burger.gif').frames(tablero, onDrawFrame);
-}
-
-draw();
+playBtn.addEventListener('click', ()=> {
+    tablero.style.display = "none";
+    juego.classList.add('game-container-on');
+    player.classList.add('player');
+});

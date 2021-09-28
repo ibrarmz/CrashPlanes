@@ -19,16 +19,13 @@ body{
     cursor: auto;
 }
 
-i {
-    position: absolute;
-}
-
 p {
     color: #fff;
     font-size: 3.5rem;
 }
 
 .container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,6 +40,19 @@ p {
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+.container-off{
+    display: none;
+}
+
+i {
+    position: absolute;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.5);
+    right: 11%;
+    top: 6%;
+    z-index: 2;
 }
 
 @keyframes back-animation {
@@ -98,4 +108,33 @@ a {
     display: flex;
     justify-content: end;
     padding-right: 2rem;
+}
+
+.game-container-on {
+    position: relative;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 90%;
+    border: 2px solid #000;
+    background-image: url('../pics/space-game.png');
+    background-size: cover;
+    animation-timing-function: linear;
+    animation-name: back-animation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.player {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    right: 35%;
+    bottom: 0;
+    background-image: url('../pics/player/player.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
